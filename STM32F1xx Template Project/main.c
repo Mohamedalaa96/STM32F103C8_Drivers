@@ -12,9 +12,9 @@ int main(void)
 	while(1)
 	{
 		GPIO_WritePin(GPIOC,GPIO_PIN_13,1);		
-		Delays(10);
+		Delays(100);
 		GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
-		Delays(10);
+		Delays(100);
 	}
 	
 }
@@ -25,7 +25,7 @@ void Delays(int time) /// Random delay function
 	int t;
 	for(;time>0;time--)
 	{
-	 for(t=0;t<100000;t++)
+	 for(t=0;t<10000;t++)
 		{}
 	}
 }
