@@ -49,3 +49,7 @@ void GPIO_WritePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN,uint8_t state){
 uint16_t GPIO_ReadPin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN){
 		return ( GPIO_PORT->IDR & GPIO_PIN) ;
 }
+void GPIO_TogglePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN){
+	GPIO_PORT->ODR ^= GPIO_PIN;
+
+}
