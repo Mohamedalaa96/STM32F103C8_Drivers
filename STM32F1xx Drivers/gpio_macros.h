@@ -1,10 +1,5 @@
 
 
-#define A                   GPIOA_BASE
-#define B                   GPIOB_BASE
-#define C                   GPIOC_BASE
-
-
 #define RCC_APB2ENR     (*((volatile unsigned long *) 0x40021018))
 
 
