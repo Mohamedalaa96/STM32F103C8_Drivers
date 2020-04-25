@@ -48,7 +48,7 @@
     //EX: ....(RCC_GPIOC);
     void GPIO_EnableCLock(uint8_t RCC_GPIO);
     //Ex: ....(GPIOC,GPIO_MODE_OUTPUT0
-    void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint16_t BIT);
+    void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint8_t BIT);
 
     void GPIO_WritePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN,uint8_t state);
 
