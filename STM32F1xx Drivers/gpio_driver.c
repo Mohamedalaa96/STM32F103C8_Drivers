@@ -6,10 +6,10 @@
 
 void GPIO_EnableCLock(uint8_t RCC_GPIO){
 	RCC_APB2ENR |= (uint32_t)RCC_GPIO;
-
 }
+
 //use struct to set configuration and enum , could be modified
-void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint8_t BIT){
+void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint16_t BIT){
 
      if (BIT >7){
         BIT = (BIT-8); 

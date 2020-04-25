@@ -4,6 +4,8 @@
 
 #include <stdint.h>
 #include "gpio_macros.h"
+#include "stm32f10x.h"                  // Device header
+
 
 
 /*************************** GPIO PINs ***************************/
@@ -27,19 +29,8 @@
 
 /*************************** Pripheral Structs ***************************/
 
-    typedef struct
-    {
-    volatile uint32_t CRL;
-    volatile uint32_t CRH;
-    volatile uint32_t IDR;
-    volatile uint32_t ODR;
-    volatile uint32_t BSRR;
-    volatile uint32_t BRR;
-    volatile uint32_t LCKR;
-    } GPIO_TypeDef;
-
+   
 /*************************** Pripheral Addresses ***************************/
-    #define GPIOC          ((GPIO_TypeDef *) 0x40011000U)
 
 /*************************** RCC_OFFSETS for GPIO ***************************/
 
@@ -57,7 +48,7 @@
     //EX: ....(RCC_GPIOC);
     void GPIO_EnableCLock(uint8_t RCC_GPIO);
     //Ex: ....(GPIOC,GPIO_MODE_OUTPUT0
-    void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint8_t BIT);
+    void GPIO_SetMode(GPIO_TypeDef *GPIO_PORT, uint8_t GPIO_MODE, uint8_t GPIO_CONFIG, uint16_t BIT);
 
     void GPIO_WritePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN,uint8_t state);
 
