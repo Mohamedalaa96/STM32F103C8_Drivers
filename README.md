@@ -14,7 +14,7 @@ Implementation Example:
 ```sh
 GPIO_SetMode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ,GPIO_CONFIG_OUTPUT_PUSHPULL,5);
 ```
-####* Paramitters:
+#### * Paramitters:
 
 #### GPIO_PORT:
 
