@@ -48,13 +48,62 @@ unsigned byte int 0:15.
 ### void GPIO_WritePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN,uint8_t state);
 Implementation Example:
 ```sh
-GPIO_EnableCLock(RCC_GPIOB);
+GPIO_WritePin(GPIOA,GPIO_PIN_5,0);
 ```
+#### * Paramitters:
+
+#### GPIO_PORT:
+
+GPIOA 
+GPIOB
+GPIOC
+...etc.
+
+#### GPIO_PIN:
+
+GPIO_PIN_x   x is number from 0:15
+
+#### state
+0 or 1
 
 ### uint16_t GPIO_ReadPin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN);
+
 Implementation Example:
 ```sh
-GPIO_EnableCLock(RCC_GPIOB);
+GPIO_ReadPin(GPIOA,GPIO_PIN_7);
 ```
+#### * Paramitters:
+
+#### GPIO_PORT:
+
+GPIOA 
+GPIOB
+GPIOC
+...etc.
+
+#### GPIO_PIN: *needs update
+
+GPIO_PIN_x   x is number from 0:15
+
+#### return type 0,1
+0 or 1
+
 
 ### void GPIO_TogglePin(GPIO_TypeDef *GPIO_PORT, uint16_t GPIO_PIN);
+Implementation Example:
+```sh
+GPIO_TogglePin(GPIOA,GPIO_PIN_5);
+```
+#### * Paramitters:
+
+#### GPIO_PORT:
+
+GPIOA 
+GPIOB
+GPIOC
+...etc.
+
+#### GPIO_PIN:
+
+GPIO_PIN_x   x is number from 0:15
+
